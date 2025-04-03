@@ -8,7 +8,7 @@ public class Plat {
     private float prixPla;
 
     //Constructeur
-    public Plat(int idCat, String libCat, float prixPla) {
+    public Plat(int idPla, String nomPla, float prixPla) {
         this.idPla = idPla;
         this.nomPla = nomPla;
         this.prixPla = prixPla;

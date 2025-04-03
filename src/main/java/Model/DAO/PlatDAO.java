@@ -122,18 +122,20 @@ public class PlatDAO extends DAO<Plat> {
 
     @Override
     public ArrayList<Plat> findAll() {
-        Plat plat1 = new Plat(99, "test", 0 );
+        Plat plat1 = null;
         ArrayList<Plat> liste = new ArrayList<Plat>();
 
 
         try (
                 Statement stmt = connect.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT * FROM plats;");
+                ResultSet rs = stmt.executeQuery("SELECT idPla, nomPla, prixPla FROM plats;");
         ) {
             // iteration des resultats
             while (rs.next()) {
 
-                Plat plat = new Plat(rs.getInt("idPla"), rs.getString("nomPla"), rs.getFloat("prixPla"));
+                Plat plat = new Plat(rs.getInt("idPla"),
+                        rs.getString("nomPla"),
+                        rs.getFloat("prixPla"));
 System.out.println(plat);
 
                 liste.add(plat);

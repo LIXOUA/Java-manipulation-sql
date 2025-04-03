@@ -13,7 +13,7 @@ public class Main {
         TestCon testcon1 = new TestCon();
         testcon1.TestCon();
 
-        //
+
         System.out.println("\n Methode findAll : \n");
         TestCategorie testcategorie1 = new TestCategorie();
         testcategorie1.testCategorieFindAll();
@@ -65,11 +65,12 @@ public class Main {
             System.out.println("\n Table Catégorie : \n");
             testcategorie1.testCategorieFindAll();
         }
-
+        //
 /////////////////////
-
+*/
 
         //
+        Scanner sc = new Scanner(System.in);
         System.out.println("\nTable Plat \n\n Methode findAll : \n");
         TestPlat testplat1 = new TestPlat();
         Plat plat1 = new Plat(99, "Plat de fromage", 4);
